@@ -1,0 +1,13 @@
+model1 <- lm(y ~ x, data = f)
+summary(model1)
+model1$residuals
+par(mfrow=c(2,2))
+plot(model1)
+mean(residuals(model1))
+plot(model1,1)
+plot(model1,3)
+plot(model1,2)
+qqnorm(model1)
+ks.test(rstandard(model1), "pnorm")
+shapiro.test(rstandard(model1))
+plot(model1, 3)
